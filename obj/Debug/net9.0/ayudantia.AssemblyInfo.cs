@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ayudantia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f63a4a1079b806a12d594066c756562bc832daa7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ayudantia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ayudantia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

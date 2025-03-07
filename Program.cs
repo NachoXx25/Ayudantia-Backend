@@ -1,4 +1,16 @@
+using ayudantia.src.Data;
+using dotenv.net;
+using dotenv.net.Utilities;
+using Microsoft.EntityFrameworkCore;
+
+
+DotEnv.Load();
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DataContext>(options => 
+    options.UseNpgsql(EnvReader.GetStringValue("PostgreSQLConnection")));
+
+
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -17,8 +29,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-app.UseSwagger();
+app.UseSwagger();   
 app.UseSwaggerUI();
+app.UseAuthorization();
+app.MapControllers();
+app.UseHttpsRedirection();
 app.Run();
 
